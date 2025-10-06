@@ -1,3 +1,4 @@
+import React, {Component} from 'react';
 import { View, Text, StyleSheet, TextInput } from 'react-native';
 
 class Aula06 extends Component {
