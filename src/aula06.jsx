@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { View, Text, StyleSheet, TextInput } from 'react-native';
 
 class Aula06 extends Component {
@@ -11,22 +11,22 @@ class Aula06 extends Component {
     }
 
     pegaNome(texto) {
-        if(texto.lenght > 0) {
-            this.state.State({nome: "Bem Vindo: " + texto})
+        if (texto.length > 0) {
+            this.setState({ nome: "Bem Vindo: " + texto })
         }
         else {
-            this.setState({nome:''})
+            this.setState({ nome: '' })
         }
     }
 
-    render () {
-        return(
-            <View style={StyleSheet.conteiner}>
-                <TextInput 
-                style={styles.imput}
-                placeholder='Digite seu nome:'
-                underlineColorAndroid="transparent"
-                onChangeText={this.pegaNome}
+    render() {
+        return (
+            <View style={styles.container}>
+                <TextInput
+                    style={styles.input}
+                    placeholder='Digite seu nome:'
+                    underlineColorAndroid="transparent"
+                    onChangeText={this.pegaNome}
                 />
 
                 <Text style={styles.texto}>{this.state.nome}</Text>
@@ -34,11 +34,11 @@ class Aula06 extends Component {
         );
     }
 }
-
+ 
 export default Aula06;
 
-const styles = StyleSheet.create ({
-    conteiner: {
+const styles = StyleSheet.create({
+    container: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
