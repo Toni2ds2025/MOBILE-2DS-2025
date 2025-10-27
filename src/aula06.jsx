@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, TextInput } from 'react-native';
+import { View, Text, StyleSheet, TextInput, Image } from 'react-native';
 
 class Aula06 extends Component {
     constructor(props) {
@@ -25,6 +25,20 @@ class Aula06 extends Component {
                 <TextInput
                     style={styles.input}
                     placeholder='Digite seu nome:'
+                    underlineColorAndroid="transparent"
+                    onChangeText={this.pegaNome}
+                />
+
+                <Text style={styles.texto}>{this.state.nome}</Text>
+
+                <Image
+                style={styles.img1}
+                source={ require('../img/hatsune-miku-project-sekai.gif')}
+                />
+                
+                <TextInput
+                    style={styles.input}
+                    placeholder='Teste:'
                     underlineColorAndroid="transparent"
                     onChangeText={this.pegaNome}
                 />
@@ -56,5 +70,10 @@ const styles = StyleSheet.create({
     texto: {
         textAlign: 'center',
         fontSize: 25,
-    }
+    },
+
+    img1: {
+      width: 200,
+      height: 200,
+    },
 });
